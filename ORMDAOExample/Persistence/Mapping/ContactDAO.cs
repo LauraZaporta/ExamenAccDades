@@ -133,11 +133,11 @@ namespace ORMDAOExample.Persistence.Mapping
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "UPDATE Contact SET Name = @Name, Surname = @Surname WHERE Id = @Id";
+                string query = "UPDATE Contact SET Name = @Name, Surname = @Email WHERE Id = @Id";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Name", contact.Name);
-                    command.Parameters.AddWithValue("@Surname", contact.Surname);
+                    command.Parameters.AddWithValue("@Email", contact.Email);
                     command.Parameters.AddWithValue("@Id", contact.Id);
                     connection.Open();
                     command.ExecuteNonQuery();
