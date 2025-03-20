@@ -5,7 +5,7 @@ namespace EntityFrameworkExample
 {
     public class Program
     {
-        public static void Main()
+        public static void Done()
         {
             using var context = new ApplicationDbContext();
 
